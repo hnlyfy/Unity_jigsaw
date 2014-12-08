@@ -26,7 +26,6 @@ public class Main : MonoBehaviour
 		for (int i = 0; i < blocks.Count; i++) {
 			GameObject go = AddChild (target, null, uiTexturePrefeb);
 			go.transform.localPosition = blocks [i].position;
-
 			UIT = go.GetComponentInChildren<UITexture> ();
 			UIT.mainTexture = mainTexture;
 			UIT.uvRect = blocks [i].rect;
@@ -63,18 +62,6 @@ public class Main : MonoBehaviour
 			this.setBlockArr ();
 		}
 
-		public int getSizeX {
-			get {
-				return _sizeX;
-			}
-		}
-
-		public int getSizeY {
-			get {
-				return _sizeY;
-			}
-		}
-
 		private void setBlockArr ()
 		{
 			Block tBlock;
@@ -95,7 +82,6 @@ public class Main : MonoBehaviour
 
 	public class Block
 	{
-
 		public Rect rect;
 		public float UVRectX;
 		public float UVRectY;
